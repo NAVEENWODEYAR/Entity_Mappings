@@ -10,6 +10,7 @@ public class MapeamentosApplication
 	public static void main(String[] args)
 	{
 		SpringApplication.run(MapeamentosApplication.class, args);
+		System.out.println("Entity mappings in dataJPA,");
 	}
 
 }
