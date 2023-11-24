@@ -4,11 +4,9 @@ import com.bhas.entity.Address;
 import com.bhas.entity.Employee;
 import com.bhas.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,6 +17,14 @@ public class EmployeeController
     // DI,
     @Autowired
     private EmployeeService employeeService;
+
+    // test endPoint,
+    @GetMapping("/test")
+    @ResponseStatus(code = HttpStatus.BANDWIDTH_LIMIT_EXCEEDED)
+    public String greetMsg()
+    {
+        return "Welcome to "+EmployeeController.class+" application";
+    }
 
     // 1. postRequest for sending the data,
     @PostMapping("/insertEmployees")
