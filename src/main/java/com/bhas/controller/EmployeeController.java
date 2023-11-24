@@ -1,5 +1,6 @@
 package com.bhas.controller;
 
+import com.bhas.dto.ResponseDTO;
 import com.bhas.entity.Address;
 import com.bhas.entity.Employee;
 import com.bhas.service.EmployeeService;
@@ -32,5 +33,12 @@ public class EmployeeController
     {
         employeeService.insertEmployees(employees);
         return  ResponseEntity.ok("Saved");
+    }
+
+    // 2. SELECT * FROM TABLE-NAME;
+    @GetMapping("/getEmployees")
+    public ResponseEntity<ResponseDTO> getEmployees()
+    {
+        return new ResponseEntity<>(new ResponseDTO("List<Employess>",employeeService.getEmployees()),HttpStatus.FOUND);
     }
 }
