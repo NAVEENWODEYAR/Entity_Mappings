@@ -20,6 +20,6 @@ public class Employee
     private double empSalary;
 
     @OneToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "addId")
+    @JoinColumn(name = "fk_addId")
     private Address address;
 }
