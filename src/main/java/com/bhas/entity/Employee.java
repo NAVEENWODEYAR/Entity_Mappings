@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -26,6 +27,7 @@ public class Employee
 //    private Address address;
 
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "addId",referencedColumnName = "empId")
-    private List<Address> addresses;
+//    @JoinColumn(name = "addId",referencedColumnName = "empId")
+    @JoinColumn(name = "fk_addId")
+    private List<Address> addresses = new ArrayList<>();
 }

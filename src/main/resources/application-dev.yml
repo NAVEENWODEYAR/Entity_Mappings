@@ -1,4 +1,4 @@
-# SIT- System Integrations Test,
+# SIT -System Integrations Test,
 
 server:
   port: 9876
@@ -15,7 +15,7 @@ spring:
   #JPA properties
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
     show-sql: true
     database: postgresql
     database-platform: org.hibernate.dialect.MySQL8Dialect
