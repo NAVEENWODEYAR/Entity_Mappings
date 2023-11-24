@@ -26,6 +26,6 @@ public class Employee
 //    private Address address;
 
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "fa_addId",referencedColumnName = "empId")
+    @JoinColumn(name = "addId",referencedColumnName = "empId")
     private List<Address> addresses;
 }
