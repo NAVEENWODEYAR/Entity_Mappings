@@ -7,10 +7,10 @@ spring:
   application:
     name: Mapeamentos
   datasource:
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/mappings
-    username: postgres
-    password: boss
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mappings?createDatabaseIfNotExit=true
+    username: ${name}
+    password: ${pwd}
 
   #JPA properties
   jpa:
@@ -18,7 +18,7 @@ spring:
       ddl-auto: update
     show-sql: true
     database: postgresql
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database-platform: org.hibernate.dialect.MySQL8Dialect
     generate-ddl: true
     open-in-view: false
   security:
