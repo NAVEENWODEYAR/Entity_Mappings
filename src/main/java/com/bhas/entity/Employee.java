@@ -18,5 +18,8 @@ public class Employee
     private String empName;
     private String empMail;
     private double empSalary;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "addId")
     private Address address;
 }
