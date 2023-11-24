@@ -21,6 +21,4 @@ public class Address
     private String city;
     private String state;
 
-    @OneToOne(mappedBy = "address")
-    private Employee employee;
 }
