@@ -35,7 +35,7 @@ public class EmployeeController
         return  ResponseEntity.ok("Saved");
     }
 
-    // 2. SELECT * FROM TABLE-NAME;
+    // 2. getRequest;
     @GetMapping("/getEmployees")
     public ResponseEntity<ResponseDTO> getEmployees()
     {
