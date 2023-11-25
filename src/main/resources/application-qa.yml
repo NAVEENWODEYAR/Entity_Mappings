@@ -1,0 +1,27 @@
+# SIT- System Integrations Test,
+
+server:
+  port: 9876
+
+spring:
+  application:
+    name: Mapeamentos
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/mappings
+    username: postgres
+    password: boss
+
+  #JPA properties
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: true
+    open-in-view: false
+  security:
+    user:
+      name: entity
+      password: entity
