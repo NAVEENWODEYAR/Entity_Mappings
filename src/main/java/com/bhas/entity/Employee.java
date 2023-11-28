@@ -16,7 +16,7 @@ import java.util.List;
 public class Employee
 {
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int empId;
     private String empName;
     private String empMail;
