@@ -12,11 +12,10 @@ import java.util.List;
 @Service
 public class EmployeeService
 {
-    // DI,
     @Autowired
     private EmployeeRepo employeeRepo;
 
-    // CRUD
+    // CRUD operations,
     //1. INSERT INTO TABLE-NAME VALUES();
     public Employee insertEmployee(Employee employee)
     {
